@@ -48,17 +48,33 @@ body {
     margin: 0 1rem;
   }
   
-  nav ul li a {
-    color: #64ffda; /* Teal color for links */
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #ffffff; /* White on hover */
-  }
-  
+  /* Navigation Hover Effect */
+nav ul li a {
+  color: #64ffda; /* Teal color for links */
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffffff; /* White underline */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Full width underline on hover */
+}
   nav ul li a i {
     margin-right: 0.5rem;
   }
@@ -79,38 +95,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
   }
-  
-  /* About Section */
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .about-text, .skills, .contact-info {
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  .skills ul, .contact-info ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skills ul li, .contact-info ul li {
-    margin: 0.5rem 0;
-  }
-  
-  .contact-info a {
-    color: #64ffda;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .contact-info a:hover {
-    color: #ffffff;
-  }
-  
+
   /* Projects and Achievements Sections */
   .project, .achievement {
     background-color: #112240; /* Slightly lighter dark blue */
@@ -188,3 +173,123 @@ body {
     color: #8892b0;
     margin-top: 2rem;
   }
+
+
+
+/* About Me Section */
+.about-title {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+#about-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  object-fit: cover;
+  z-index: -1; /* Ensure video stays in the background */
+}
+
+.about-title h2 {
+  position: relative; /* Ensure text stays above the video */
+  font-size: 3rem;
+  color: #46ffda; /* Teal color for title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #112240; /* Slightly lighter dark blue */
+  color:#64ffda;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text, .skills, .contact-info {
+  flex: 1;
+  min-width: 250px;
+  background-color: #0a192f;
+  color:#ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-text:hover, .skills:hover, .contact-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skills h3 {
+  color: #64ffda; /* Teal color for title */
+}
+.about-text h3{
+  color:#64ffda;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  color: #ccd6f6; /* Light text color */
+}
+
+.skills ul li i {
+  margin-right: 0.5rem;
+  color: #64ffda; /* Teal color for checkmark */
+}
+
+/* Contact Info Section */
+.contact-info h3 {
+  color: #64ffda; /* Teal color for title */
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info ul li a {
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info ul li a:hover {
+  color: #64ffda; /* Teal on hover */
+}
+
+.contact-info ul li i {
+  margin-right: 0.5rem;
+  color: #64ffda; /* Teal color for icons */
+}
