@@ -293,3 +293,22 @@ nav ul li a:hover::after {
   margin-right: 0.5rem;
   color: #64ffda; /* Teal color for icons */
 }
+.filters {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: #112240;
+  color: #64ffda;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: #64ffda;
+  color: #0a192f;
+}
