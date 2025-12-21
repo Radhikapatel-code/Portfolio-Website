@@ -6,21 +6,21 @@ import { ArrowRight, Calendar, Tag } from 'lucide-react';
 const blogPosts = [
   {
     id: 1,
-    title: "Why I Refused to Choose Between Hardware & Software",
-    excerpt: "In a world of specialized developers, I explore the power of being a generalist who understands both the silicon (VLSI) and the syntax (AI).",
+    title: "Working in a collaborative environment",
+    excerpt: "My First ever big project experience taught me the importance of teamwork, communication, and adaptability in achieving shared goals.",
     date: "Dec 10, 2025",
     tag: "Career"
   },
   {
     id: 2,
-    title: "Optimizing EV Flash Charging using Genetic Algorithms",
-    excerpt: "A deep dive into how I used bio-inspired logic to solve real-world constraints in Electric Vehicle charging infrastructure.",
-    date: "Nov 28, 2025",
+    title: "Project Opportunities in EV Flash Charging",
+    excerpt: "Had the opportunity to work on a research project involving EV flash charging, exploring innovative solutions for rapid charging technologies with my professor. This project can help me get shortlisted for internships.",
+    date: "Dec 15, 2025",
     tag: "Research"
   },
   {
     id: 3,
-    title: "The Aesthetics of Code: Developing with a 'Doll' Mindset",
+    title: "The Aesthetics of Code: Developing Frontend with Design in Mind",
     excerpt: "Code isn't just logic; it's art. How I use design systems and precise typography to make technical dashboards feel elegant.",
     date: "Oct 15, 2025",
     tag: "Design"

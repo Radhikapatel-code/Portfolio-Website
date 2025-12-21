@@ -8,34 +8,34 @@ const projects = [
     id: 1,
     title: "Classync",
     category: "Full Stack Platform",
-    description: "A comprehensive virtual classroom environment bridging the gap between students and teachers with real-time interaction.",
+    description: "A comprehensive virtual classroom environment bridging the gap between students and teachers with real-time interaction and with AI Features.",
     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
     gradient: "from-blue-500 to-aqua-400",
     icon: <BookOpen size={40} className="text-white" />,
-    link: "#", // Add actual link
-    github: "#"
+    link: "https://github.com/asv447/Classync-Virtual-Classroom-Platform", // Add actual link
+    github: "https://github.com/asv447/Classync-Virtual-Classroom-Platform"
   },
   {
     id: 2,
-    title: "EV Flash Charging",
-    category: "Hardware Research",
-    description: "Optimizing charging algorithms for Electric Vehicles to reduce downtime. Integrating VLSI concepts with modern power systems.",
-    tech: ["Python", "Optimization", "VLSI", "Matlab"],
+    title: "Study-Easy",
+    category: "Full Stack Productivity Application",
+    description: "Aesthetic Task Management and Habit Tracking app designed to boost productivity with a sleek, user-friendly interface with note-taking and Pomodoro features.",
+    tech: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     gradient: "from-purple-500 to-pink-500",
     icon: <Zap size={40} className="text-white" />,
-    link: "#",
-    github: "#"
+    link: "https://github.com/Radhikapatel-code/study-easy",
+    github: "https://github.com/Radhikapatel-code/study-easy"
   },
   {
     id: 3,
-    title: "Neuromorphic UI",
-    category: "Design System",
-    description: "My personal portfolio (this website). Built with a focus on 'Tech-Doll' aesthetics, high-performance animations, and responsive design.",
-    tech: ["React", "Tailwind", "Framer Motion", "Vite"],
+    title: "Echolingo",
+    category: "AI-Powered Voice Captioning and Dubbing App",
+    description: "Echolingo leverages AI to provide real-time voice captioning and dubbing, enhancing accessibility and communication across languages.",
+    tech: ["Python", "OpenAI Whisper", "gTTS", "moviepy"],
     gradient: "from-emerald-400 to-cyan-500",
     icon: <Layout size={40} className="text-white" />,
-    link: "#",
-    github: "#"
+    link: "https://github.com/Radhikapatel-code/Echolingo",
+    github: "https://github.com/Radhikapatel-code/Echolingo"
   }
 ];
 
