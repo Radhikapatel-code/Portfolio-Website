@@ -33,10 +33,10 @@ export default function AboutMe() {
               I love bridging the gap between theoretical algorithms and real-world applications.
             </p>
             <p>
-              Recently, I've built <b className="text-white font-medium">Classync</b>, a virtual classroom platform, and currently am researching <b className="text-white font-medium">optimization algorithms</b> for EV Charging systems.
+              Recently, I've built <b className="text-white font-medium">SentinelAI</b>, a SentinelAI – Explainable AI Decision Engine for Fraud Detection, and currently am working under a research project <b className="text-white font-medium">optimization algorithms</b> for EV flash Charging placements.
             </p>
             <p>
-              Whether I'm maintaining my streak on <span className="text-white font-medium">LeetCode</span> or exploring the depths of <span className="text-white font-medium">Machine Learning</span>, 
+              Whether I'm maintaining my streak on <span className="text-white font-medium">LeetCode</span> or exploring the depths of <span className="text-white font-medium">Artificial Intelligence</span>, 
               I am always eager to <span className="italic text-aqua-200"> learn, build, and debug</span> my way to a solution.
             </p>
           </div>

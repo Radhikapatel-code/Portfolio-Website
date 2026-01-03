@@ -5,21 +5,21 @@ import { Code2, Cpu, Database, Figma, Globe, Layout, Server, Terminal, Zap, GitG
 // Organized Skills Data
 const skillCategories = [
   {
-    title: "Frontend & Design",
+    title: "Languages",
     skills: [
-      { name: "React", icon: <Code2 size={20} /> },
-      { name: "Tailwind CSS", icon: <Layout size={20} /> },
-      { name: "Figma", icon: <Box size={20} /> }, // Using Box as generic design icon if Figma missing
-      { name: "Three.js", icon: <Globe size={20} /> },
+      { name: "C/C++", icon: <Code2 size={20} /> },
+      { name: "Python", icon: <Terminal size={20} /> },
+      { name: "SQL", icon: <Database size={20} /> }, // Using Box as generic design icon if Figma missing
+      { name: "JavaScript", icon: <Server size={20} /> },
     ]
   },
   {
-    title: "Backend & AI",
+    title: "Frameworks",
     skills: [
-      { name: "Python", icon: <Terminal size={20} /> },
+      { name: "React.js", icon: <Terminal size={20} /> },
       { name: "Node.js", icon: <Server size={20} /> },
-      { name: "TensorFlow", icon: <BrainCircuit size={20} /> },
-      { name: "MongoDB", icon: <Database size={20} /> },
+      { name: "FastAPI", icon: <BrainCircuit size={20} /> },
+      { name: "Streamlit", icon: <Globe size={20} /> },
     ]
   },
   {
