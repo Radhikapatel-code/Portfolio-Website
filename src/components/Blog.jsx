@@ -1,96 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Tag } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-// Plausible Blog Topics based on your profile
 const blogPosts = [
   {
     id: 1,
+    slug: "collaborative-environment",
     title: "Working in a collaborative environment",
-    excerpt: "My First ever big project experience taught me the importance of teamwork, communication, and adaptability in achieving shared goals.",
+    excerpt: "My first big project taught me teamwork, communication, and adaptability.",
     date: "Dec 10, 2025",
-    tag: "Career"
+    tag: "Career",
+    content: `
+Working on my first major project helped me understand how essential collaboration is.
+I learned how to communicate ideas clearly, handle conflicts professionally,
+and adapt to changing requirements while working in a team environment.
+    `
   },
   {
     id: 2,
+    slug: "ev-flash-charging",
     title: "Project Opportunities in EV Flash Charging",
-    excerpt: "Had the opportunity to work on a research project involving EV flash charging, exploring innovative solutions for rapid charging technologies with my professor. This project can help me get shortlisted for internships.",
+    excerpt: "Research project on rapid EV charging with my professor.",
     date: "Dec 15, 2025",
-    tag: "Research"
+    tag: "Research",
+    content: `
+This research project explored flash charging technologies for electric vehicles.
+It gave me hands-on exposure to real-world problem solving and academic research.
+    `
   },
   {
     id: 3,
-    title: "The Aesthetics of Code: Developing Frontend with Design in Mind",
-    excerpt: "Code isn't just logic; it's art. How I use design systems and precise typography to make technical dashboards feel elegant.",
+    slug: "aesthetics-of-code",
+    title: "The Aesthetics of Code",
+    excerpt: "Why frontend code should feel as elegant as it functions.",
     date: "Oct 15, 2025",
-    tag: "Design"
+    tag: "Design",
+    content: `
+Code is not just logic—it is also design.
+This article explores how clean UI, spacing, typography,
+and animations improve user experience.
+    `
   }
 ];
 
 export default function Blog() {
+  const navigate = useNavigate();
+
   return (
-    <section className="relative py-32 px-6 bg-[#050505] overflow-hidden">
-      
-      {/* Background Grid (Matches Portfolio) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+    <section className="relative py-32 px-6 bg-[#050505]">
+      <div className="max-w-6xl mx-auto">
 
-      {/* Decorative Glows */}
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-aqua-500/5 rounded-full blur-[80px]"></div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
-        
-        {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-purple-400">Insights</span>
-          </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-4">Latest Insights</h2>
           <p className="text-gray-400">Thoughts on Technology, Design, and Research.</p>
-        </motion.div>
+        </div>
 
-        {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -5 }}
-              className="group flex flex-col justify-between bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-aqua-400/30 transition-all duration-300 cursor-pointer"
+              className="bg-white/5 border border-white/10 p-8 rounded-2xl"
             >
-              
-              <div>
-                {/* Meta Data */}
-                <div className="flex items-center gap-4 mb-4 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  <span className="flex items-center gap-1 text-aqua-300">
-                    <Tag size={12} /> {post.tag}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} /> {post.date}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 leading-snug group-hover:text-aqua-300 transition-colors">
-                  {post.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  {post.excerpt}
-                </p>
+              <div className="mb-4 text-xs text-gray-400 flex gap-4">
+                <span className="flex items-center gap-1">
+                  <Tag size={12} /> {post.tag}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar size={12} /> {post.date}
+                </span>
               </div>
 
-              {/* Read More Link */}
-              <div className="flex items-center gap-2 text-sm font-semibold text-white group-hover:text-aqua-400 transition-colors">
-                Read Article <ArrowRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
-              </div>
+              <h3 className="text-xl font-bold mb-3">{post.title}</h3>
+              <p className="text-gray-400 mb-6">{post.excerpt}</p>
 
+              <div
+                onClick={() => navigate(`/blog/${post.slug}`)}
+                className="flex items-center gap-2 cursor-pointer text-aqua-400"
+              >
+                Read Article <ArrowRight size={16} />
+              </div>
             </motion.div>
           ))}
         </div>

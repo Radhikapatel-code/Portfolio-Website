@@ -6,14 +6,14 @@ import { ExternalLink, Github, Zap, BookOpen, Layout, Code } from 'lucide-react'
 const projects = [
   {
     id: 1,
-    title: "Classync",
-    category: "Full Stack Platform",
-    description: "A comprehensive virtual classroom environment bridging the gap between students and teachers with real-time interaction and with AI Features.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+    title: "SentinelAI",
+    category: "Explainable AI Decision Engine for Fraud Detection",
+    description: "An AI-driven fraud detection system that not only identifies fraudulent activities with high accuracy but also provides clear, interpretable explanations for its decisions, enhancing trust and transparency.",
+    tech: ["Python", "Scikit-learn", "SHAP", "Streamlit","fastAPI"],
     gradient: "from-blue-500 to-aqua-400",
     icon: <BookOpen size={40} className="text-white" />,
-    link: "https://github.com/asv447/Classync-Virtual-Classroom-Platform", // Add actual link
-    github: "https://github.com/asv447/Classync-Virtual-Classroom-Platform"
+    link: "https://github.com/Radhikapatel-code/SentinelAI", // Add actual link
+    github: "https://github.com/Radhikapatel-code/SentinelAI"
   },
   {
     id: 2,
