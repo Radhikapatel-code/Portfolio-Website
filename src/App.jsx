@@ -4,12 +4,14 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutMe from './components/AboutMe';
+import Coursework from './components/Coursework';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 import PortfolioGallery from './components/PortfolioGallery';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import BlogArticle from './components/BlogArticle';
+import BlogArticle from './components/BLogArticle';
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
             <main>
               <div id="home"><HeroSection /></div>
               <div id="about"><AboutMe /></div>
+              <div id="coursework"><Coursework /></div>
               <div id="skills"><Skills /></div>
+              <div id="experience"><Experience /></div>
               <div id="projects"><PortfolioGallery /></div>
               <div id="blog"><Blog /></div>
               <div id="contact"><Contact /></div>
