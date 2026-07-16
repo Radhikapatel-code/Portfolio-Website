@@ -11,7 +11,7 @@ import PortfolioGallery from './components/PortfolioGallery';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import BlogArticle from './components/BLogArticle';
+import BlogArticle from './components/BlogArticle';
 
 function App() {
   return (
